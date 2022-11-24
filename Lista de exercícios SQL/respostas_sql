@@ -1,0 +1,14 @@
+a) select cod_prod, desconto from produtos
+
+b) select valor_unit, desconto,(select valor_unit-valor_unit*desconto/100) as valor_vendido from produtos 
+
+c) update produtos set desconto = 0 where desconto is null;
+
+d) select ID_NF, ID_ITEM, COD_PROD, VALOR_UNIT, DESCONTO,(select quantidade * VALOR_UNIT) as VALOR_TOTAL , 
+(select VALOR_UNIT-VALOR_UNIT*desconto/100) as valor_vendido from produtos;
+
+e) select id_nf,(quantidade*id_nf) as valor_total from produtos order by id_nf
+
+f) select id_nf,(valor_unit-(valor_unit*desconto/100)) as valor_vendido from produtos order by valor_vendido acs
+
+g) select cod_prod,quantidade from produtos order by quantidade desc limit 1

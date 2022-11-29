@@ -1,0 +1,47 @@
+1) SELECT * FROM admission;
+   select first_name, last_name, gender
+   from patients
+   where gender = 'M';
+
+2) select first_name, last_name
+   from patients
+   WHERE allergies IS NULL;
+
+3) select first_name
+   from patients
+   where first_name like 'C%';
+
+4) select first_name, last_name
+   from patients
+   where weight between 100 and 120;
+
+5) UPDATE patients
+   SET allergies = 'NKA'
+   WHERE allergies IS NULL;
+
+6) SELECT CONCAT(first_name,' ', last_name) AS full_name
+   FROM patients;
+
+7) SELECT first_name, last_name, province_name
+   from patients
+   join province_names on province_names.province_id = patients.province_id;
+
+8) select count(*)
+   as total-patients
+   from patients
+   where year(birth_date) = 2010;
+
+9) select first_name, last_name, 
+   max(height) as height
+   from patients;
+
+10) select * from patients
+    where patient_id in (1, 45, 534, 879, 1000);
+
+11) select count(*)
+    as total_admissions
+    from admissions;
+
+12) select count(*)
+    as total_admissions
+    from admissions;
